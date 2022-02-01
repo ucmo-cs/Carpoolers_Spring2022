@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Flag")]
-public class Flag : ScriptableObject
+public class FloatSO : ScriptableObject
 {
-  public bool value;
+  public float value;
 
-  private void OnEnable() {
+  private void OnEnable()
+  {
     hideFlags = HideFlags.DontUnloadUnusedAsset;
   }
 }
