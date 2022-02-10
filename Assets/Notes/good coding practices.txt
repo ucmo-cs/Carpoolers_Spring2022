@@ -1,0 +1,14 @@
+Nate 02.07.2022
+
+Some things to keep in mind to try and keep the project as clean as possible.
+
+When writing code, please try to make code as:
+1. Modular as possible. Code should be able to do one thing well with as little dependency as possible. A lot of code should be able to be reused in multiple different areas
+  without issue. If you need to make a change to a piece of code to make it work somewhere else, unless you can make a change that is unobtrusive and 100% will not change the
+  purpose of the piece of code, it would probably be better to create a child that inherits from that piece of code or to just make something new altogether.
+2. Clean as possible. Obviously short is better than not short.
+
+Also, please keep the assets directory as organized as possible; put things in the proper folders, create new folders if a place to put it doesn't already exist, etc.
+
+Lastly and least importantly, variables start with a lower case, classes start with an upper case, and I don't know what functions start with anymore.
+Frik you Unity.

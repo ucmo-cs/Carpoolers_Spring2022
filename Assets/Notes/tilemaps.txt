@@ -1,0 +1,15 @@
+Nate 02.07.2022
+
+https://www.youtube.com/watch?v=ryISV_nH8qw - very good video that explains the tilemap basics (i.e. what I know about tilemaps)
+https://learn.unity.com/tutorial/using-rule-tiles - tutorial on how rule tiles work, i.e. the thing that lets you paint tiles and it figures out which ones go where automatically
+Also, there's a package you need to import to use rule tiles. Since I imported it, it should be on yours, but in case it isn't:
+1. Open Edit > Project Settings > Package Manager
+2. In Advanced Settings, check the box for "Enable Preview Packages"
+3. Open Windows > Package Manager
+4. In the top left corner of the dialog, change "Packages: [Whatever it's on]" to Unity Registry
+5. Find and click on "2D Tilemap Extras" in the list of packages
+6. Click on install in the bottom left corner of the dialog
+
+Also I like to move the grid .5 units to the left and down. In unity, when you normally place a gameobject, its position represents the center of the gameobject, while
+when placing a tile in the tilemap, its position represents the bottom left corner of the tilemap, which means the normal unity gameobjects don't line up with the tilemap.
+Moving the grid (which moves all the tilemaps under it) left and down lines the tilemaps up with the normal unity gameobjects.

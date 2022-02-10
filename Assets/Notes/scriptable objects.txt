@@ -1,0 +1,15 @@
+Nate 02.07.2022
+
+I think of scriptable objects as variables that are stored in the assets folder. For example, I created a scriptable object called FloatSO in the project.
+You can create an instance of this scriptable object by right-clicking anywhere in the assets folder and going to Create > Standard Variables > Float. This option in
+the menu was created by the CreateAssetMenu function at the top of the class in the FloatSO.cs file. Once you create the instance, you can click on it and look
+in the inspector and see that you can change the value of the float inside of it in the inspector. You can also reference these types of objects in the code;
+you just need to remember to change the value of the object by referencing floatSOVariable.value, since the value is an attribute and not the actual instance
+itself. In addition, you can use scriptable objects for any other standard variable type (I would suggest naming the variable attribute "value" and the class [VariableName]SO
+for each of these you do so that all of the scriptable object standard variables will follow the same format) and for pretty much anything where you would need
+to keep information in between scenes.
+
+Also, if the game running makes a change to a scriptable object, the change won't reset when you stop the game like it does with most things.
+
+https://unity.com/how-to/architect-game-code-scriptable-objects - very good; on practical use of scriptable objects
+also talks about general good code practices and an events system that we can implement if you guys like it
