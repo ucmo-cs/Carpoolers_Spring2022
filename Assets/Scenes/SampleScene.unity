@@ -428,8 +428,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcad290e5d42e2e4e985ac05b351da18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  rigidbody2: {fileID: 1435343860}
+  speed: {fileID: 11400000, guid: 6d3ce46140acb654f88633a98aecb030, type: 2}
+  rigidbody2d: {fileID: 1435343860}
 --- !u!61 &1435343859
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -2,26 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
-    public Rigidbody2D rigidbody2;
+    public static string HORIZONTAL_AXIS = "Horizontal";
+    public static string VERTICAL_AXIS = "Vertical";
+
+    public FloatSO speed;
+    public Rigidbody2D rigidbody2d;
 
     private Vector2 velocity;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        velocity = speed * new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        velocity = speed.value * new Vector2(Input.GetAxis(HORIZONTAL_AXIS), Input.GetAxis(VERTICAL_AXIS));
     }
 
     void FixedUpdate()
     {
-        rigidbody2.velocity = velocity;
+        rigidbody2d.velocity = velocity;
     }
 }
