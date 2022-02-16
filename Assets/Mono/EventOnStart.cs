@@ -5,10 +5,10 @@ using UnityEngine.Events;
 
 public class EventOnStart : MonoBehaviour
 {
-  public UnityEvent eventOnStart;
+    public UnityEvent eventOnStart;
 
-  void Start()
-  {
-    eventOnStart.Invoke();
-  }
+    void Start()
+    {
+        eventOnStart.Invoke();
+    }
 }
