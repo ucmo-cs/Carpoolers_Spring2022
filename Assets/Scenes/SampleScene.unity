@@ -457,6 +457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveInput: {fileID: 11400000, guid: 4294d503360795240bca337606d6378d, type: 2}
+  moveInputRaw: {fileID: 11400000, guid: 9abc53288067a3e42988624fe1e8d0f3, type: 2}
 --- !u!1 &1435343857
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,20 +477,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1435343858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1435343857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcad290e5d42e2e4e985ac05b351da18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: {fileID: 11400000, guid: 6d3ce46140acb654f88633a98aecb030, type: 2}
-  rigidbody2d: {fileID: 1435343860}
 --- !u!61 &1435343859
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -568,8 +555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputValueType: 1
   moveInput: {x: 0, y: 0}
-  moveInputSO: {fileID: 11400000, guid: 4294d503360795240bca337606d6378d, type: 2}
-  rb: {fileID: 0}
+  moveInputSO: {fileID: 11400000, guid: 9abc53288067a3e42988624fe1e8d0f3, type: 2}
   useScriptObj: 1
   directionSO: {fileID: 11400000, guid: 882d02cb9ed68904aaba97b4a21b4a6c, type: 2}
   direction: 2

@@ -6,7 +6,7 @@ using UnityEditor;
 public class DetectDirection : MonoBehaviour
 {
     /**
-     * There are three different types of input the script can use to detect direction:
+     * There are two different types of input the script can use to detect direction:
      * Vector - the input value is directly provided by (assumedly) another script, i.e. this
      * script will assign the vector with detectDirectionVar.moveInput = new Vector2(input info)
      * this should be used in objects that cannot have their own scriptable object created, such as
@@ -14,24 +14,21 @@ public class DetectDirection : MonoBehaviour
      * 
      * VectorSO - the input value is provided through a scriptable object; another script will
      * change the value of the scriptable object, which will in turn affect this script. This
-     * should be used whenever possible, such for the player
+     * should be used whenever possible, such as for the player
      *
-     * Rigidbody - the input value is provided by the velocity of the object, which is prone to
-     * error (ex. if an object is inputting into a heavy wind that is blowing them in the opposite
-     * direction); however, it is easiest to set up, so I guess you can use it if you're feeling
-     * lazy, just know that there might be issues if other physics affect the object
+     * also, in both cases, you should use a raw version of the inputs, i.e. a vector2 that shows
+     * 1 when the object is inputting one way, -1 when the object is inputting another, and 0 when
+     * nothing is inputted. It's noted where in the code this would be a problem
     **/
     public enum InputType
     {
         VECTOR,
         VECTOR_SO,
-        RIGIDBODY,
     };
 
     public InputType inputValueType;
     public Vector2 moveInput;
     public Vector2SO moveInputSO;
-    public Rigidbody2D rb;
 
     /**
      * The direction this script calculates can be accessed via either the direction attribute (i.e.
@@ -58,9 +55,6 @@ public class DetectDirection : MonoBehaviour
             case InputType.VECTOR_SO:
                 inputValue = moveInputSO.value;
                 break;
-            case InputType.RIGIDBODY:
-                inputValue = rb.velocity;
-                break;
             default:
                 inputValue = new Vector2(0, 0);
                 break;
@@ -77,6 +71,12 @@ public class DetectDirection : MonoBehaviour
 
             // change the direction to the most recent direction, i.e. the one that isn't the previous direction
             direction = horizDir == prevDirection ? vertiDir : horizDir;
+
+            // if we weren't taking in the raw input, this wouldn't 100% work, since, for example, if the object
+            // takes some time to slow down, and the object was moving left and down while facing left, and the
+            // object stopped inputting left, the object wouldn't face down until it had completely slowed down
+            // going left, since inputValue.x and inputValue.y would both != 0 despite the object not inputting
+            // in both ways
         }
 
         else
@@ -106,7 +106,6 @@ public class DetectDirectionEditor : Editor
     SerializedProperty inputValueType;
     SerializedProperty moveInput;
     SerializedProperty moveInputSO;
-    SerializedProperty rb;
     SerializedProperty useScriptObj;
     SerializedProperty directionSO;
 
@@ -115,7 +114,6 @@ public class DetectDirectionEditor : Editor
         inputValueType = serializedObject.FindProperty("inputValueType");
         moveInput = serializedObject.FindProperty("moveInput");
         moveInputSO = serializedObject.FindProperty("moveInputSO");
-        rb = serializedObject.FindProperty("rb");
         useScriptObj = serializedObject.FindProperty("useScriptObj");
         directionSO = serializedObject.FindProperty("directionSO");
     }
@@ -134,9 +132,6 @@ public class DetectDirectionEditor : Editor
                 break;
             case DetectDirection.InputType.VECTOR_SO:
                 EditorGUILayout.PropertyField(moveInputSO);
-                break;
-            case DetectDirection.InputType.RIGIDBODY:
-                EditorGUILayout.PropertyField(rb);
                 break;
         }
 
