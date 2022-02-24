@@ -15,4 +15,28 @@ public class DirectionSO : ScriptableObject
     {
         hideFlags = HideFlags.DontUnloadUnusedAsset;
     }
+
+    // this function assumes the distance is with regards to north
+    public static Vector2 rotatePosToCorrectDirection(Vector2 distance, Direction direction) {
+        switch (direction) {
+            case Direction.EAST:
+                return new Vector2(distance.y, distance.x * -1);
+            case Direction.SOUTH:
+                return new Vector2(distance.x, distance.y * -1);
+            case Direction.WEST:
+                return new Vector2(distance.y * -1, distance.x);
+            default:
+                return distance;
+        }
+    }
+
+    public static Vector2 rotateScaleToCorrectDirection(Vector2 scale, Direction direction) {
+        switch (direction) {
+            case Direction.EAST:
+            case Direction.WEST:
+                return new Vector2(scale.y, scale.x);
+            default:
+                return scale;
+        }
+    }
 }
