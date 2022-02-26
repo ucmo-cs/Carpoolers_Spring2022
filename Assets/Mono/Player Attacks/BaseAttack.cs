@@ -57,7 +57,7 @@ public class BaseAttack : MonoBehaviour
 
     public void enteredAttack(Collider2D collider)
     {
-        
+        Debug.Log(collider.gameObject);
     }
 
     public void exitedAttack(Collider2D collider)
