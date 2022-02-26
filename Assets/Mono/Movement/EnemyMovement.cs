@@ -21,8 +21,9 @@ public class EnemyMovement : MonoBehaviour
         {
             navAgent = GetComponent<NavMeshAgent>();
         }
-        navAgent.autoBraking = false;
         destPoint = 0;
+        navAgent.updateRotation = false;
+        navAgent.updateUpAxis = false;
     }
 
     // Update is called once per frame
