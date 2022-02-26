@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public static string HORIZONTAL_AXIS = "Horizontal";
-    public static string VERTICAL_AXIS = "Vertical";
-
     public FloatSO speed;
+    public Vector2SO moveInput;
     public Rigidbody2D rigidbody2d;
 
     private Vector2 velocity;
 
     void Update()
     {
-        velocity = speed.value * new Vector2(Input.GetAxis(HORIZONTAL_AXIS), Input.GetAxis(VERTICAL_AXIS));
+        velocity = speed.value * moveInput.value;
     }
 
     void FixedUpdate()
