@@ -19,6 +19,8 @@ public class BaseAttack : MonoBehaviour
     public float hitboxLength;
     public float hitboxDelay;
 
+    public float damage;
+
     private bool hitboxDelayCount;
     private float hitboxDelayCounter = 0;
 
@@ -57,7 +59,11 @@ public class BaseAttack : MonoBehaviour
 
     public void enteredAttack(Collider2D collider)
     {
-        Debug.Log(collider.gameObject);
+        Health enemyHealth = collider.gameObject.GetComponent<Health>();
+
+        if (!enemyHealth) return;
+
+        enemyHealth.damageSelf(damage);
     }
 
     public void exitedAttack(Collider2D collider)
@@ -80,6 +86,7 @@ public class BaseAttackEditor : Editor
     SerializedProperty direction;
     SerializedProperty hitboxLength;
     SerializedProperty hitboxDelay;
+    SerializedProperty damage;
 
     void OnEnable()
     {
@@ -93,6 +100,7 @@ public class BaseAttackEditor : Editor
         direction = serializedObject.FindProperty("direction");
         hitboxLength = serializedObject.FindProperty("hitboxLength");
         hitboxDelay = serializedObject.FindProperty("hitboxDelay");
+        damage = serializedObject.FindProperty("damage");
     }
 
     public override void OnInspectorGUI()
@@ -102,6 +110,7 @@ public class BaseAttackEditor : Editor
         EditorGUILayout.PropertyField(useInputName);
         if (useInputName.boolValue) EditorGUILayout.PropertyField(inputName);
 
+        EditorGUILayout.PropertyField(damage);
         EditorGUILayout.PropertyField(hitboxDelay);
         EditorGUILayout.PropertyField(hitboxLength);
         EditorGUILayout.PropertyField(positionFromFront);
