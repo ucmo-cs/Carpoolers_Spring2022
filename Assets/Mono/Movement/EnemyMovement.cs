@@ -14,31 +14,12 @@ public class EnemyMovement : MonoBehaviour
     private bool trackingPlayer;
     private Vector2 velocity;
 
-    // Start is called before the first frame update
     void Start()
     {
-        if (navAgent == null)
-        {
-            navAgent = GetComponent<NavMeshAgent>();
-        }
+        if (navAgent == null) navAgent = GetComponent<NavMeshAgent>();
         destPoint = 0;
         navAgent.updateRotation = false;
         navAgent.updateUpAxis = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // deciding how the enemy should move
-        // if (!DetectPlayer())
-        // {
-        //     Patrol();
-        // }
-        // else
-        // {
-        //     // MoveTowardsPlayer();
-        // }
-
     }
 
     void FixedUpdate()
@@ -52,17 +33,13 @@ public class EnemyMovement : MonoBehaviour
         {
 
         }
-        // making the enemy move or stay put.
-        // rigidbody2.velocity = velocity;
     }
 
     // moves towards point
     void Patrol()
     {
         navAgent.destination = points[destPoint].position;
-
         destPoint = (destPoint + 1) % points.Length;
-        // transform.position = Vector2.MoveTowards(transform.position, positions[indead], )
     }
 
     // Have logic here to see if there is a player present
