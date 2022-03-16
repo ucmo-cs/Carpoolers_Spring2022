@@ -1,0 +1,17 @@
+Hello there friends,
+
+In order to make something that moves using the navMesh like an enemy or npc (idk if player can be included in that),
+you need to add the "Nav Mesh Agent" component to the moving entity.
+
+Making it move from point to point is relatively easy. In a script, you need to define the nav agent, and then you can set
+the .destination field of the nav agent to the .transform field of whatever entity you want it to go to.
+In my basic enemy prefab, you'll see an embedded gameobject named pathing with 3 sprites inside. These sprites do not need
+to have any special components and you can make the sprites invisible, the only point to them is to tell the enemy where to go.
+
+So when you want a nav agent named Enemy move to point1 (assuming you also got that gameobject), you do 
+"Enemy.destination = point1.transform"
+
+I can include further information here if this information does not suffice.
+Here are some resources I used for figuring out Nav Mesh and Agents:
+https://github.com/h8man/NavMeshPlus/blob/master/navmeshplus.pdf
+https://www.youtube.com/watch?v=SDfEytEjb5o

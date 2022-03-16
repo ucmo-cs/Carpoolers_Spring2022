@@ -1,0 +1,24 @@
+Oh boy,
+
+I'll explain the method of using tilemaps to define where is walkable and where is not.
+I'll also assume you know how to use a tilemap
+
+You'll want to create a tilemap for places an entity can and can't go, so you need to 
+1. create separate tilemapes for the ground, walls, maybe a BIG ROCK, or even a pond. 
+2. you should add a NavMeshModifier component to it
+3. click the option that says "Override Area"
+4. choose whether the area is walkable or not for the new dropdown that showed up.
+NOTE: You shouldn't need to do this on the base layer since layers are supposed to default to walkable (you can change the default),
+but if the base layer isn't detected after you set up NavMeshSurface2d, then go ahead and follow the above steps to make it known.
+NOTE: if you're using a layer that's just decorative, you can use NavMeshModifier and select the "Ignore From Build" option
+
+To create a nav mesh mapping of a level, (assuming you did the steps above) you need to 
+1. create an empty gameobject named "NavMesh" 
+2. add a component to it called "NavMeshSurface2d"
+3. click the button at the very bottom "Rotate Surface to XY".
+4. click the button above it called "Bake"
+You should be able to see a fancy blue thing covering all the walkable area.
+NOTE: If it looks funky like there are spots that are going outside of the tilemap and into empty space, click the options
+"Override by Grid" and "Compress by Bounds" in the NavMeshSurface2d component.
+NOTE: If the navmesh wasn't going out of bounds without the above options selected, but not walkable areas are not looking concise
+you can deselect "Override by Grid" and "Compress by Bounds" in the NavMeshSurface2d component. 
