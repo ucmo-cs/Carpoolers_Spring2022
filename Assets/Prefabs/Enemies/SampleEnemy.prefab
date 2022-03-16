@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5134056178067042249}
   - component: {fileID: 5676585455329020009}
   - component: {fileID: 5366132676473241583}
+  - component: {fileID: 4306298871475979509}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -171,6 +172,24 @@ MonoBehaviour:
   navAgent: {fileID: 5676585455329020009}
   points:
   - {fileID: 6417382034247534339}
+--- !u!114 &4306298871475979509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005849621872161356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f45dce317dfa1b40a0a2472f3c3b781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthIsSO: 0
+  currHealth: 10
+  currHealthSO: {fileID: 0}
+  maxHealthIsSO: 0
+  maxHealth: 10
+  maxHealthSO: {fileID: 0}
 --- !u!1 &1484418936461389339
 GameObject:
   m_ObjectHideFlags: 0
