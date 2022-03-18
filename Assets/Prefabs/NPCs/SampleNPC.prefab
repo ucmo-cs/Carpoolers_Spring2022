@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: edd43990e0d65cf4789d1c943b0f43c9, type: 3}
-  m_Color: {r: 1, g: 0.3160377, b: 0.3160377, a: 1}
+  m_Color: {r: 0.03355573, g: 0.7735849, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -189,8 +189,8 @@ MonoBehaviour:
   speed: 1
   navAgent: {fileID: 5676585455329020009}
   points:
-  - {fileID: 6886321804594372066}
-  followPlayer: 1
+  - {fileID: 8848354968663834870}
+  followPlayer: 0
 --- !u!1 &1484418936461389339
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1484418936461389336}
   m_Layer: 0
-  m_Name: SampleEnemy
+  m_Name: SampleNPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -250,11 +250,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6886321804594372066}
+  - {fileID: 8848354968663834870}
   m_Father: {fileID: 1484418936461389336}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &6081143352725677820
+--- !u!1001 &8159965538360736744
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -311,8 +311,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 627e7736c820d4b5692d4e238c68686b, type: 3}
---- !u!4 &6886321804594372066 stripped
+--- !u!4 &8848354968663834870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 861786883861969694, guid: 627e7736c820d4b5692d4e238c68686b, type: 3}
-  m_PrefabInstance: {fileID: 6081143352725677820}
+  m_PrefabInstance: {fileID: 8159965538360736744}
   m_PrefabAsset: {fileID: 0}
