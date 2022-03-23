@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyMovement : MonoBehaviour
+public class NPCMovement : MonoBehaviour
 {
     public float speed;
     public NavMeshAgent navAgent;
     public Transform[] points;
+    public bool followPlayer = false;
 
 
     private int destPoint;
@@ -24,14 +25,14 @@ public class EnemyMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!DetectPlayer())
+        if (followPlayer && DetectPlayer())
         {
-            if (points.Length != 0 && !navAgent.pathPending && navAgent.remainingDistance < 0.5f)
-                Patrol();
+            // fetch player's location and update where to go
         }
         else
         {
-
+            if (points.Length != 0 && !navAgent.pathPending && navAgent.remainingDistance < 0.5f)
+                Patrol();
         }
     }
 
