@@ -22,12 +22,6 @@ public class PushObject : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void FixedUpdate() {
         if (isTraveling) {
             if (transform.position == destination) {
@@ -59,7 +53,6 @@ public class PushObject : MonoBehaviour
     void pushInDirection()
     {
         Debug.Log(playerDirection.value);
-        System.Console.WriteLine(playerDirection.value);
         float movementSpeed = rawMovementSpeed * Time.deltaTime;
         Vector3 endpoint;
         switch (playerDirection.value)
@@ -81,7 +74,6 @@ public class PushObject : MonoBehaviour
                 isTraveling = true;
                 break;
             default:
-                Debug.Log("What the hell");
                 break;
         }
 
