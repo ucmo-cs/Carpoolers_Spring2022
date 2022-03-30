@@ -10,7 +10,8 @@ public class PushObject : MonoBehaviour
     public DirectionSO playerDirection = null;
     public float rawMovementSpeed = 1.0f;
 
-    private GameObject moveableObject;
+    private Vector3 destination;
+    private bool isTraveling = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,14 +25,24 @@ public class PushObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
 
+    void FixedUpdate() {
+        if (isTraveling) {
+            if (transform.position == destination) {
+                isTraveling = false;
+            } else {
+                float movementSpeed = rawMovementSpeed * Time.deltaTime;
+                transform.position = Vector3.Lerp(transform.position, destination, movementSpeed);
+            }
+        }
     }
 
     // do math to send it up down left or right
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
-        // Debug.Log(collisionInfo.getDirection);
-        if (collisionInfo.gameObject.tag == "Player")
+        if (collisionInfo.gameObject.tag == "Player" && !isTraveling)
         {
             if (pushCount > 0)
             {
@@ -54,29 +65,20 @@ public class PushObject : MonoBehaviour
         switch (playerDirection.value)
         {
             case Direction.EAST:
-                endpoint = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
-                Debug.Log(endpoint);
-                Debug.Log(transform.position);
-                transform.position = endpoint;
-                // transform.position = Vector3.Lerp(transform.position, endpoint, movementSpeed);
+                destination = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
+                isTraveling = true;
                 break;
             case Direction.WEST:
-                endpoint = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
-                Debug.Log(endpoint);
-                Debug.Log(transform.position);
-                transform.position = endpoint;
+                destination = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
+                isTraveling = true;
                 break;
             case Direction.NORTH:
-                endpoint = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
-                Debug.Log(endpoint);
-                Debug.Log(transform.position);
-                transform.position = endpoint;
+                destination = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+                isTraveling = true;
                 break;
             case Direction.SOUTH:
-                endpoint = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
-                Debug.Log(endpoint);
-                Debug.Log(transform.position);
-                transform.position = endpoint;
+                destination = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
+                isTraveling = true;
                 break;
             default:
                 Debug.Log("What the hell");
