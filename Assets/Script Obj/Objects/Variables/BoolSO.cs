@@ -2,15 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Variables/Float")]
-public class FloatSO : ScriptableObject
+[CreateAssetMenu(menuName = "Variables/Boolean")]
+public class BoolSO : ScriptableObject
 {
-    public float value;
-
-    public void addOne()
-    {
-        value++;
-    }
+    public bool value;
 
     // fun fact about scriptable objects: they can be used in the editor to store data between scenes,
     // but in the build they only are stored if the object is used in that scene; otherwise, they
