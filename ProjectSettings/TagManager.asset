@@ -13,8 +13,8 @@ TagManager:
   - UI
   - Attack Hitbox
   - Damage Hitbox
-  - 
-  - 
+  - Player
+  - InteractsWithPlayer
   - 
   - 
   - 
