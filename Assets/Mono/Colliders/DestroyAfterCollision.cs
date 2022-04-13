@@ -7,15 +7,25 @@ public class DestroyAfterCollision : MonoBehaviour
 {
     public UnityEvent onCollisionEnter;
 
+    public BoolSO isNotDestroyed; // not required
+
+    private void onEnter() {
+        onCollisionEnter.Invoke();
+        if (isNotDestroyed) isNotDestroyed.value = false;
+        Destroy(gameObject);
+    }
+
+    void Start() {
+        if (isNotDestroyed && !isNotDestroyed.value) Destroy(gameObject);
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        onCollisionEnter.Invoke();
-        Destroy(gameObject);
+        onEnter();
     }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        onCollisionEnter.Invoke();
-        Destroy(gameObject);
+        onEnter();
     }
 }
