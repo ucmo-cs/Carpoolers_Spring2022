@@ -1,0 +1,13 @@
+There are two types of keys and doors: normal ones and specified ones. Specified ones are attached; a specific key (or keys) goes to a specific door (or doors).
+
+Each key and door has a boolean scriptable object attached to it to determine whether it should exist. When a key is picked up or a door unlocked, the
+boolean changes from true to false, meaning the object will dissapear and will even be gone if the scene is reloaded (such as if the player leaves and
+returns to the dungeon).
+
+Normal keys work with a float scriptable object called keys that lists how many keys the player has. When the player picks up a key, one is added to the keys
+variable. When the player walks into a door, it checks the keys variable to see if the player has any keys. If they do, it removes one from the key variable and
+unlocks the door.
+
+Specificied keys work with a string list scriptable object called specificKeys that lists the specific keys the player currently has. When the player picks up a key,
+it adds its specific key (as in a string that identifies what type of key it is) to the string list. When the player walks into a door, it checks the specificKeys variable
+for the specific key (as in the string again) that is used for that door. If it finds it, it removes it from the list and unlocks.
