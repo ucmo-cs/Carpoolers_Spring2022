@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Entrance.unity
+    guid: 559ad997a085c4695bc2b92f00408486
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Sword Room.unity
+    guid: 8bcffad0fb9d34547ae6510230f99c43
   m_configObjects: {}
