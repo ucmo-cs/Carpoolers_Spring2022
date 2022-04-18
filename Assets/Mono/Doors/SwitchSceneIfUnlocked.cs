@@ -10,8 +10,8 @@ public class SwitchSceneIfUnlocked : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
-        if (!isLocked.value) {
-            SceneManager.LoadScene(scene, LoadSceneMode.Single);
+        if (!isLocked.value && scene.Length > 0) {
+            SceneManager.LoadScene(scene);
         }
     }
 }
