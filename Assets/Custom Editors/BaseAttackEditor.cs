@@ -8,10 +8,12 @@ using UnityEditor;
 public class BaseAttackEditor : Editor
 {
     SerializedProperty hitboxPrefab;
+    SerializedProperty allowMultipleHitboxes;
     SerializedProperty useInputName;
     SerializedProperty inputName;
     SerializedProperty positionFromFront;
     SerializedProperty scale;
+    SerializedProperty velocityFromFront;
     SerializedProperty dirFromScriptObj;
     SerializedProperty directionSO;
     SerializedProperty direction;
@@ -22,10 +24,12 @@ public class BaseAttackEditor : Editor
     void OnEnable()
     {
         hitboxPrefab = serializedObject.FindProperty("hitboxPrefab");
+        allowMultipleHitboxes = serializedObject.FindProperty("allowMultipleHitboxes");
         useInputName = serializedObject.FindProperty("useInputName");
         inputName = serializedObject.FindProperty("inputName");
         positionFromFront = serializedObject.FindProperty("positionFromFront");
         scale = serializedObject.FindProperty("scale");
+        velocityFromFront = serializedObject.FindProperty("velocityFromFront");
         dirFromScriptObj = serializedObject.FindProperty("dirFromScriptObj");
         directionSO = serializedObject.FindProperty("directionSO");
         direction = serializedObject.FindProperty("direction");
@@ -37,6 +41,8 @@ public class BaseAttackEditor : Editor
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
+        
+        EditorGUILayout.PropertyField(allowMultipleHitboxes);
 
         EditorGUILayout.PropertyField(useInputName);
         if (useInputName.boolValue) EditorGUILayout.PropertyField(inputName);
@@ -46,6 +52,7 @@ public class BaseAttackEditor : Editor
         EditorGUILayout.PropertyField(hitboxLength);
         EditorGUILayout.PropertyField(positionFromFront);
         EditorGUILayout.PropertyField(scale);
+        EditorGUILayout.PropertyField(velocityFromFront);
 
         EditorGUILayout.PropertyField(hitboxPrefab);
 

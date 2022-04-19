@@ -5,11 +5,13 @@ using UnityEngine;
 public class BaseAttack : MonoBehaviour
 {
     public GameObject hitboxPrefab;
+    public bool allowMultipleHitboxes;
     public bool useInputName;
     public string inputName = "";
 
     public Vector2 positionFromFront;
     public Vector2 scale = new Vector2(1, 1);
+    public Vector2 velocityFromFront;
 
     public bool dirFromScriptObj;
     public DirectionSO directionSO;
@@ -24,9 +26,13 @@ public class BaseAttack : MonoBehaviour
     private float hitboxDelayCounter = 0;
 
     private Direction directionToUse;
-    private GameObject hitbox;
+    private List<GameObject> hitboxes = new List<GameObject>();
 
     public void Update() {
+        for (int i = hitboxes.Count - 1; i >= 0; i--) {
+            if (!hitboxes[i]) hitboxes.RemoveAt(i);
+        }
+
         if (useInputName && Input.GetButtonDown(inputName)) onAttackInput();
 
         if (hitboxDelayCount) {
@@ -42,18 +48,23 @@ public class BaseAttack : MonoBehaviour
     }
 
     private void instantiateHitbox() {
-        hitbox = Instantiate<GameObject>(hitboxPrefab, transform);
+        GameObject hitbox = Instantiate<GameObject>(hitboxPrefab, transform);
         hitbox.transform.localPosition = DirectionSO.rotatePosToCorrectDirection(positionFromFront, directionToUse);
         hitbox.transform.localScale = DirectionSO.rotateScaleToCorrectDirection(scale, directionToUse);
+        hitbox.GetComponent<Rigidbody2D>().velocity = DirectionSO.rotatePosToCorrectDirection(velocityFromFront, directionToUse);
         hitbox.GetComponent<BaseAttackHitbox>().creator = this;
-        Destroy(hitbox, hitboxLength);
+        if (hitboxLength != -1) Destroy(hitbox, hitboxLength);
+
+        hitboxes.Add(hitbox);
     }
 
-    public void onAttackInput() {
-        if (hitbox) return;
+    public bool onAttackInput() {
+        if (!allowMultipleHitboxes && hitboxes.Count > 0) return false;
         
         hitboxDelayCount = true;
         directionToUse = dirFromScriptObj ? directionSO.value : direction;
+
+        return true;
     }
 
     public void enteredAttack(Collider2D collider)
