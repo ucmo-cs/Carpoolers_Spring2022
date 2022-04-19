@@ -10,31 +10,40 @@ public class GrabElectricSword : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collisionInfo)
     {
-        if (collisionInfo.gameObject.tag == "Player" && !hasElectricSword.value)
+        if (collisionInfo.gameObject.tag == "Player")
         {
-            grabElectricSword();
-            unlockElectricGates();
-            lockEmergencyDoors();
+            if (!hasElectricSword.value)
+            {
+                grabElectricSword(true);
+                unlockElectricGates(false);
+                lockEmergencyDoors(true);
+            }
+            else // mostly for testing purposes, you can put the sword back
+            {
+                grabElectricSword(false);
+                unlockElectricGates(true);
+                lockEmergencyDoors(false);
+            }
         }
     }
 
-    void grabElectricSword()
+    void grabElectricSword(bool value)
     {
-        hasElectricSword.value = true;
+        hasElectricSword.value = value;
     }
 
-    void unlockElectricGates()
+    void unlockElectricGates(bool value)
     {
-        isElectricGateLocked.value = false;
+        isElectricGateLocked.value = value;
     }
 
-    void lockEmergencyDoors()
+    void lockEmergencyDoors(bool value)
     {
         if (individualEmergencyDoorLocks.Count > 0)
         {
             individualEmergencyDoorLocks.ForEach(delegate (BoolSO emergencyDoorLock)
             {
-                emergencyDoorLock.value = true;
+                emergencyDoorLock.value = value;
             });
         }
     }

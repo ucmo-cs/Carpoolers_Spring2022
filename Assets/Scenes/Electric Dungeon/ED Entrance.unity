@@ -2344,6 +2344,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: isLocked
+      value: 
+      objectReference: {fileID: 11400000, guid: 6ae98c40dbd484f97a77447caf40745b, type: 2}
     - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2388,6 +2392,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 6154821731308288567, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: isLocked
+      value: 
+      objectReference: {fileID: 11400000, guid: 6ae98c40dbd484f97a77447caf40745b, type: 2}
     - target: {fileID: 7982634962489286695, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
       propertyPath: m_Name
       value: Emergency Door
@@ -2493,7 +2501,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3943303897537299854, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: scene
-      value: Electric Sword Room
+      value: ED Sword Room
       objectReference: {fileID: 0}
     - target: {fileID: 6382871206044955760, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: m_RootOrder
