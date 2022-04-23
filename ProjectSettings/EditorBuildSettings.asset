@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Electric Dungeon/ED Sword Room.unity
     guid: 8bcffad0fb9d34547ae6510230f99c43
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Boss Key Room.unity
+    guid: 0de840f508c1a4716b14a0918a73f7ef
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Conveyor Belt Room 1.unity
+    guid: a5231487078b64374bf0d765523541fb
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Conveyor Belt Room 2.unity
+    guid: 7686c9d3a70b9496e8527c42a729ec9e
   m_configObjects: {}
