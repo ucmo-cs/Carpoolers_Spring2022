@@ -8,4 +8,49 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Entrance.unity
+    guid: 559ad997a085c4695bc2b92f00408486
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Sword Room.unity
+    guid: 8bcffad0fb9d34547ae6510230f99c43
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Boss Key Room.unity
+    guid: 0de840f508c1a4716b14a0918a73f7ef
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Conveyor Belt Room 1.unity
+    guid: a5231487078b64374bf0d765523541fb
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Boss Room 1.unity
+    guid: 1cdf4107bb9c1441e84d41cf04514924
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Boss Room 2_1.unity
+    guid: cfca181e8b48f43228eb34da63f00bc2
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Boss Room 2_2.unity
+    guid: eab5235b837004f10824ea4f37ce56d1
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Combat Room 1_1.unity
+    guid: 47e6a45a09b0e44ddb581a2fb5dbf8b7
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Combat Room 2_1.unity
+    guid: c2fd7146b9b7044dcb8ba82237721574
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Conveyor Belt Room 2.unity
+    guid: 275cb8ac6c76844e9a9fa2a601f313d0
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Maze Room 1.unity
+    guid: 0ac011765afc84ba4b571989fd7d10a1
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Maze Room 2.unity
+    guid: 1dda45330034f49ae9fcab1c4bbf27aa
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Shooty Room.unity
+    guid: 62275870f55fd4ac8be8367b67213b40
+  - enabled: 1
+    path: Assets/Scenes/Electric Dungeon/ED Transition Room.unity
+    guid: 7adaa91a4f52c4d2cbfdc8d163b692e0
   m_configObjects: {}
