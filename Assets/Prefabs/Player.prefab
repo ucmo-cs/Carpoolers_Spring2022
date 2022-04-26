@@ -44,10 +44,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitboxPrefab: {fileID: 2971402360108391663, guid: 76292744eccabb443a99fccc5726c7b8, type: 3}
+  allowMultipleHitboxes: 0
   useInputName: 1
   inputName: Base Attack
   positionFromFront: {x: 0, y: 1}
   scale: {x: 1, y: 0.5}
+  velocityFromFront: {x: 0, y: 0}
   dirFromScriptObj: 1
   directionSO: {fileID: 11400000, guid: 882d02cb9ed68904aaba97b4a21b4a6c, type: 2}
   direction: 0
@@ -66,6 +68,7 @@ GameObject:
   - component: {fileID: 325225388944841286}
   - component: {fileID: 325225388944841281}
   - component: {fileID: 325225388944841284}
+  - component: {fileID: 4703248664586550117}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -156,6 +159,20 @@ MonoBehaviour:
   useScriptObj: 1
   directionSO: {fileID: 11400000, guid: 882d02cb9ed68904aaba97b4a21b4a6c, type: 2}
   direction: 2
+--- !u!114 &4703248664586550117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325225388944841283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de7be8cdc8880d741a517a1751d527b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTag: {fileID: 11400000, guid: 54a9750b652b7dc41938bdb143646d6d, type: 2}
+  offset: {fileID: 11400000, guid: a511567094dfe7a4bb882042958b0a76, type: 2}
 --- !u!1 &325225388951353872
 GameObject:
   m_ObjectHideFlags: 0

@@ -156,6 +156,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLocked: {fileID: 0}
   scene: ED Boss Key Room
+  newPlayerSpawnTag: Doorway
+  playerSpawnTag: {fileID: 11400000, guid: 54a9750b652b7dc41938bdb143646d6d, type: 2}
+  newPlayerSpawnOffset: {x: 0, y: -1}
+  playerSpawnOffset: {fileID: 11400000, guid: a511567094dfe7a4bb882042958b0a76, type: 2}
 --- !u!61 &252216879
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -308,6 +312,14 @@ PrefabInstance:
       propertyPath: isLocked
       value: 
       objectReference: {fileID: 11400000, guid: b6c0d9adf74464a17906cd6557bda4c1, type: 2}
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: newPlayerSpawnTag
+      value: EmergencyDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: newPlayerSpawnOffset.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
       propertyPath: m_RootOrder
       value: 1

@@ -2697,6 +2697,14 @@ PrefabInstance:
       propertyPath: isLocked
       value: 
       objectReference: {fileID: 11400000, guid: 6a9d4f438d21e4f11b9a3a605a1e2425, type: 2}
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: newPlayerSpawnTag
+      value: EmergencyDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: newPlayerSpawnOffset.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2766,6 +2774,14 @@ PrefabInstance:
       propertyPath: isLocked
       value: 
       objectReference: {fileID: 11400000, guid: b99561083da8d45f3a81ba1ff87008ff, type: 2}
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: newPlayerSpawnTag
+      value: EmergencyDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: newPlayerSpawnOffset.x
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
       propertyPath: m_RootOrder
       value: 4

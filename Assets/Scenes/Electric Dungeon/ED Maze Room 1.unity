@@ -168,7 +168,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6382871206044955760, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6382871206044955760, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -227,7 +227,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6382871206044955760, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6382871206044955760, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -286,12 +286,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
       propertyPath: scene
-      value: ED Conveyor Belt Room 2
+      value: ED Conveyor Belt Room 1
       objectReference: {fileID: 0}
     - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
       propertyPath: isLocked
       value: 
       objectReference: {fileID: 11400000, guid: b6c0d9adf74464a17906cd6557bda4c1, type: 2}
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: newPlayerSpawnTag
+      value: EmergencyDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: newPlayerSpawnOffset.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -363,7 +371,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: b6c0d9adf74464a17906cd6557bda4c1, type: 2}
     - target: {fileID: 4849531371594723455, guid: b7fcb39868cd648858d9e6ac2c18cc08, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4849531371594723455, guid: b7fcb39868cd648858d9e6ac2c18cc08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -416,7 +424,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6382871206044955760, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6382871206044955760, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -477,9 +485,17 @@ PrefabInstance:
       propertyPath: scene
       value: ED Transition Room
       objectReference: {fileID: 0}
+    - target: {fileID: 3943303897537299854, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
+      propertyPath: newPlayerSpawnTag
+      value: Electric Gate
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943303897537299854, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
+      propertyPath: newPlayerSpawnOffset.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6382871206044955760, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6382871206044955760, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1414,6 +1430,91 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1001 &643343574
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: isLocked
+      value: 
+      objectReference: {fileID: 11400000, guid: 0f369523025d54d61bc4572892864369, type: 2}
+    - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6154821731308288567, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: unlockedSprite
+      value: 
+      objectReference: {fileID: -1884038445045965153, guid: 5053fa5a0950643418f343a527282e9f, type: 3}
+    - target: {fileID: 7982634962489286695, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: m_Name
+      value: EmergencyDoor (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+    - {fileID: 6154821731308288567, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+--- !u!1 &643343575 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7982634962489286695, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+  m_PrefabInstance: {fileID: 643343574}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &643343576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643343575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a580c058644ba438a0c4db26e12d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLocked: {fileID: 11400000, guid: 6aee5a3242e2d44eabb6311b294edfcf, type: 2}
 --- !u!1 &668521971
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,7 +2482,7 @@ Transform:
   - {fileID: 1617841767}
   - {fileID: 1112061470}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &878280548
 GameObject:
@@ -2427,7 +2528,7 @@ Transform:
   - {fileID: 1723513469}
   - {fileID: 482237561}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1112061469
 GameObject:
@@ -2768,7 +2869,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6382871206044955760, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6382871206044955760, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5418,7 +5519,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6382871206044955760, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6382871206044955760, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5481,7 +5582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 325225388944841287, guid: 39dc9514db4224f5eb9a9880ef10f599, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 325225388944841287, guid: 39dc9514db4224f5eb9a9880ef10f599, type: 3}
       propertyPath: m_LocalScale.x
@@ -5568,7 +5669,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 0f369523025d54d61bc4572892864369, type: 2}
     - target: {fileID: 4849531371594723455, guid: b7fcb39868cd648858d9e6ac2c18cc08, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4849531371594723455, guid: b7fcb39868cd648858d9e6ac2c18cc08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5653,7 +5754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6178912483871443026, guid: 59e6f8d82c3a3fa41a8ac4e67082de5d, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6178912483871443026, guid: 59e6f8d82c3a3fa41a8ac4e67082de5d, type: 3}
       propertyPath: m_LocalScale.y
@@ -5740,6 +5841,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLocked: {fileID: 11400000, guid: 7dffc698f9aac45199bbfb526cdfd46e, type: 2}
   scene: ED Boss Room 2_1
+  newPlayerSpawnTag: Boos Door
+  playerSpawnTag: {fileID: 11400000, guid: 54a9750b652b7dc41938bdb143646d6d, type: 2}
+  newPlayerSpawnOffset: {x: 0, y: -1}
+  playerSpawnOffset: {fileID: 11400000, guid: a511567094dfe7a4bb882042958b0a76, type: 2}
 --- !u!1 &2137907956
 GameObject:
   m_ObjectHideFlags: 0
@@ -5803,5 +5908,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

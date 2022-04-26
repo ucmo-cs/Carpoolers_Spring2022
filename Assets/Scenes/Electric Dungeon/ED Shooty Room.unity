@@ -951,11 +951,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
       propertyPath: scene
-      value: ED Boss Room 2_2
+      value: ED Boss Room 2_1
+      objectReference: {fileID: 0}
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: newPlayerSpawnTag
+      value: EmergencyDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: newPlayerSpawnOffset.x
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1018,9 +1026,17 @@ PrefabInstance:
       propertyPath: isLocked
       value: 
       objectReference: {fileID: 11400000, guid: ceb3e108821184845a5137462e710430, type: 2}
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: newPlayerSpawnTag
+      value: EmergencyDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: newPlayerSpawnOffset.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2508,6 +2524,14 @@ PrefabInstance:
     - target: {fileID: 3943303897537299854, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: scene
       value: ED Combat Room 2_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943303897537299854, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
+      propertyPath: newPlayerSpawnTag
+      value: Electric Gate
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943303897537299854, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
+      propertyPath: newPlayerSpawnOffset.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6382871206044955760, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: m_RootOrder
