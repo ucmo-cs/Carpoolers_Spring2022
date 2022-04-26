@@ -7,10 +7,14 @@ public class OpenOnCollision : MonoBehaviour
     public FloatSO keys;
     public BoolSO isLocked;
 
-    void OnCollisionEnter2D(Collision2D collision2D) {
-        if (keys.value < 1) return;
+    void OnCollisionEnter2D(Collision2D collision2D)
+    {
+        if (collision2D.gameObject.tag == "Player")
+        {
+            if (keys.value < 1) return;
 
-        keys.value--;
-        isLocked.value = false;
+            keys.value--;
+            isLocked.value = false;
+        }
     }
 }
