@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1670819133346826423}
   - component: {fileID: 1670819133346826376}
   - component: {fileID: 1670819133346826421}
+  - component: {fileID: -7713471337397751167}
   m_Layer: 0
   m_Name: Energy Shooty Thing
   m_TagString: Untagged
@@ -101,7 +102,7 @@ MonoBehaviour:
   useInputName: 0
   inputName: 
   positionFromFront: {x: 0, y: 0}
-  scale: {x: 1, y: 1}
+  scale: {x: 0.5, y: 0.5}
   velocityFromFront: {x: 0, y: 2}
   dirFromScriptObj: 0
   directionSO: {fileID: 0}
@@ -124,3 +125,18 @@ MonoBehaviour:
   initialDelay: 5
   timeBetweenAttacks: 3
   attack: {fileID: 1670819133346826376}
+--- !u!114 &-7713471337397751167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670819133346826377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f38e3b563e20db4eab8c3e1b584b9b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  component: {fileID: 1670819133346826421}
+  condition: {fileID: 11400000, guid: efec367d27a3548d2a9a681eb5ab85fb, type: 2}
+  flipCondition: 0
