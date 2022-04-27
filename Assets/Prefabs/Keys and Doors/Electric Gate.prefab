@@ -140,3 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLocked: {fileID: 11400000, guid: e8ab1e405728348f4a1746a3ecda1bda, type: 2}
   scene: 
+  newPlayerSpawnTag: 
+  playerSpawnTag: {fileID: 11400000, guid: 54a9750b652b7dc41938bdb143646d6d, type: 2}
+  newPlayerSpawnOffset: {x: 0, y: 0}
+  playerSpawnOffset: {fileID: 11400000, guid: a511567094dfe7a4bb882042958b0a76, type: 2}

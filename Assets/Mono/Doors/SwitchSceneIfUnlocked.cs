@@ -7,19 +7,18 @@ public class SwitchSceneIfUnlocked : MonoBehaviour
 {
     public BoolSO isLocked;
     public string scene;
+    public string newPlayerSpawnTag;
+    public StringSO playerSpawnTag;
+    public Vector2 newPlayerSpawnOffset;
+    public Vector2SO playerSpawnOffset;
 
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
-        if (scene.Length > 0)
+        if (scene.Length > 0 && (isLocked == null || !isLocked.value))
         {
-            if (isLocked == null)
-            {
-                SceneManager.LoadScene(scene);
-            }
-            else if (!isLocked.value)
-            {
-                SceneManager.LoadScene(scene);
-            }
+            playerSpawnTag.value = newPlayerSpawnTag;
+            playerSpawnOffset.value = newPlayerSpawnOffset;
+            SceneManager.LoadScene(scene);
         }
     }
 }

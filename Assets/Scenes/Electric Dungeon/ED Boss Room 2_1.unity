@@ -1674,7 +1674,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocked: {fileID: 11400000, guid: 7dffc698f9aac45199bbfb526cdfd46e, type: 2}
-  scene: ED Maze Room 2
+  scene: ED Maze Room 1
+  newPlayerSpawnTag: Boos Door
+  playerSpawnTag: {fileID: 11400000, guid: 54a9750b652b7dc41938bdb143646d6d, type: 2}
+  newPlayerSpawnOffset: {x: 0, y: 1}
+  playerSpawnOffset: {fileID: 11400000, guid: a511567094dfe7a4bb882042958b0a76, type: 2}
 --- !u!114 &760212205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3475,6 +3479,14 @@ PrefabInstance:
     - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
       propertyPath: scene
       value: ED Shooty Room
+      objectReference: {fileID: 0}
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: newPlayerSpawnTag
+      value: EmergencyDoor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: newPlayerSpawnOffset.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
       propertyPath: m_RootOrder

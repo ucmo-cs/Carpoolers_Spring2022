@@ -362,6 +362,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLocked: {fileID: 11400000, guid: 235745453e1cc5d4f8c1372a6c741d34, type: 2}
   scene: ED Entrance
+  newPlayerSpawnTag: Boos Door
+  playerSpawnTag: {fileID: 11400000, guid: 54a9750b652b7dc41938bdb143646d6d, type: 2}
+  newPlayerSpawnOffset: {x: 0, y: -1}
+  playerSpawnOffset: {fileID: 11400000, guid: a511567094dfe7a4bb882042958b0a76, type: 2}
 --- !u!1 &470349504
 GameObject:
   m_ObjectHideFlags: 0

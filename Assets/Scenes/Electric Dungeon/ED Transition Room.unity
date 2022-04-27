@@ -183,6 +183,14 @@ PrefabInstance:
       propertyPath: isLocked
       value: 
       objectReference: {fileID: 11400000, guid: b99561083da8d45f3a81ba1ff87008ff, type: 2}
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: newPlayerSpawnTag
+      value: EmergencyDoor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -660917079832853364, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
+      propertyPath: newPlayerSpawnOffset.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2952425493425777032, guid: 3a9c5f8e604a84a7a9a3575909d21203, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1083,7 +1091,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3943303897537299854, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: scene
-      value: ED Maze Room 2
+      value: ED Maze Room 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943303897537299854, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
+      propertyPath: newPlayerSpawnTag
+      value: Electric Gate (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943303897537299854, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
+      propertyPath: newPlayerSpawnOffset.x
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6382871206044955760, guid: 2e0c4160338b442aab225325324c5ae4, type: 3}
       propertyPath: m_RootOrder
