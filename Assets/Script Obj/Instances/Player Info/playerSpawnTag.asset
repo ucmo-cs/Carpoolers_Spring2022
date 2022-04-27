@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fefa291609b94a44a92b04dea78174a, type: 3}
   m_Name: playerSpawnTag
   m_EditorClassIdentifier: 
-  value: Emergency Door
+  value: EmergencyDoor
