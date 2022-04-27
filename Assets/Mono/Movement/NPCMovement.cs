@@ -9,15 +9,17 @@ public class NPCMovement : MonoBehaviour
     public NavMeshAgent navAgent;
     public Transform[] points;
     public bool followPlayer = false;
-
+    public BoolSO hasElectricSword;
 
     private int destPoint;
-    private bool trackingPlayer;
+    private bool trackingPlayer = false;
     private Vector2 velocity;
+    private GameObject player;
 
     void Start()
     {
         if (navAgent == null) navAgent = GetComponent<NavMeshAgent>();
+        player = GameObject.FindWithTag("Player");
         destPoint = 0;
         navAgent.updateRotation = false;
         navAgent.updateUpAxis = false;
@@ -25,14 +27,18 @@ public class NPCMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (followPlayer && DetectPlayer())
+        if (hasElectricSword);
         {
-            // fetch player's location and update where to go
-        }
-        else
-        {
-            if (points.Length != 0 && !navAgent.pathPending && navAgent.remainingDistance < 0.5f)
-                Patrol();
+            if (followPlayer && trackingPlayer)
+            {
+                FollowPlayer();
+                // fetch player's location and update where to go
+            }
+            else
+            {
+                if (points.Length != 0 && !navAgent.pathPending && navAgent.remainingDistance < 0.5f)
+                    Patrol();
+            }
         }
     }
 
@@ -43,9 +49,15 @@ public class NPCMovement : MonoBehaviour
         destPoint = (destPoint + 1) % points.Length;
     }
 
-    // Have logic here to see if there is a player present
-    bool DetectPlayer()
+    void FollowPlayer() {
+        navAgent.destination = player.transform.position;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-        return false;
+        if (other.gameObject.tag == "Player")
+        {
+            trackingPlayer = true;
+        }
     }
 }
