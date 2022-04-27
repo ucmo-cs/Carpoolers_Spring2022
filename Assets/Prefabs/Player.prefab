@@ -48,14 +48,14 @@ MonoBehaviour:
   useInputName: 1
   inputName: Base Attack
   positionFromFront: {x: 0, y: 1}
-  scale: {x: 1, y: 0.5}
+  scale: {x: 0.5, y: 1}
   velocityFromFront: {x: 0, y: 0}
   dirFromScriptObj: 1
   directionSO: {fileID: 11400000, guid: 882d02cb9ed68904aaba97b4a21b4a6c, type: 2}
   direction: 0
-  hitboxLength: 3
-  hitboxDelay: 1
-  damage: 0
+  hitboxLength: 0.5
+  hitboxDelay: 0
+  damage: 1
 --- !u!1 &325225388944841283
 GameObject:
   m_ObjectHideFlags: 0
