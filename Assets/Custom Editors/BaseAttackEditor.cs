@@ -11,8 +11,11 @@ public class BaseAttackEditor : Editor
     SerializedProperty allowMultipleHitboxes;
     SerializedProperty useInputName;
     SerializedProperty inputName;
+    SerializedProperty allowTeamDamage;
+    SerializedProperty team;
     SerializedProperty positionFromFront;
     SerializedProperty scale;
+    SerializedProperty colliderScale;
     SerializedProperty velocityFromFront;
     SerializedProperty dirFromScriptObj;
     SerializedProperty directionSO;
@@ -27,8 +30,11 @@ public class BaseAttackEditor : Editor
         allowMultipleHitboxes = serializedObject.FindProperty("allowMultipleHitboxes");
         useInputName = serializedObject.FindProperty("useInputName");
         inputName = serializedObject.FindProperty("inputName");
+        allowTeamDamage = serializedObject.FindProperty("allowTeamDamage");
+        team = serializedObject.FindProperty("team");
         positionFromFront = serializedObject.FindProperty("positionFromFront");
         scale = serializedObject.FindProperty("scale");
+        colliderScale = serializedObject.FindProperty("colliderScale");
         velocityFromFront = serializedObject.FindProperty("velocityFromFront");
         dirFromScriptObj = serializedObject.FindProperty("dirFromScriptObj");
         directionSO = serializedObject.FindProperty("directionSO");
@@ -47,11 +53,16 @@ public class BaseAttackEditor : Editor
         EditorGUILayout.PropertyField(useInputName);
         if (useInputName.boolValue) EditorGUILayout.PropertyField(inputName);
 
+        EditorGUILayout.PropertyField(allowTeamDamage);
+        if (!allowTeamDamage.boolValue) EditorGUILayout.PropertyField(team);
+
+
         EditorGUILayout.PropertyField(damage);
         EditorGUILayout.PropertyField(hitboxDelay);
         EditorGUILayout.PropertyField(hitboxLength);
         EditorGUILayout.PropertyField(positionFromFront);
         EditorGUILayout.PropertyField(scale);
+        EditorGUILayout.PropertyField(colliderScale);
         EditorGUILayout.PropertyField(velocityFromFront);
 
         EditorGUILayout.PropertyField(hitboxPrefab);
