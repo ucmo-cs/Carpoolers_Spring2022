@@ -278,7 +278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 325225388944841287, guid: 39dc9514db4224f5eb9a9880ef10f599, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.98211
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 325225388944841287, guid: 39dc9514db4224f5eb9a9880ef10f599, type: 3}
       propertyPath: m_LocalRotation.w
@@ -306,6 +306,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 325225388944841287, guid: 39dc9514db4224f5eb9a9880ef10f599, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613941518295040196, guid: 39dc9514db4224f5eb9a9880ef10f599, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613941518295040196, guid: 39dc9514db4224f5eb9a9880ef10f599, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -357,7 +365,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.083333336
+  m_VoxelSize: 0.11000001
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
   m_NavMeshData: {fileID: 23800000, guid: 73cf58eb11ef64908ad5e7829fb2dd85, type: 2}

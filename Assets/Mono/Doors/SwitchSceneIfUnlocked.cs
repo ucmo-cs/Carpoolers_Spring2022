@@ -14,7 +14,7 @@ public class SwitchSceneIfUnlocked : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
-        if (scene.Length > 0 && (isLocked == null || !isLocked.value))
+        if (collisionInfo.gameObject.tag == "Player" && scene.Length > 0 && (isLocked == null || !isLocked.value))
         {
             playerSpawnTag.value = newPlayerSpawnTag;
             playerSpawnOffset.value = newPlayerSpawnOffset;
