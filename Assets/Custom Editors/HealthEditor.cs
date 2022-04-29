@@ -13,6 +13,7 @@ public class HealthEditor : Editor
     SerializedProperty maxHealthIsSO;
     SerializedProperty maxHealth;
     SerializedProperty maxHealthSO;
+    SerializedProperty team;
     
     void OnEnable()
     {
@@ -22,6 +23,7 @@ public class HealthEditor : Editor
         maxHealthIsSO = serializedObject.FindProperty("maxHealthIsSO");
         maxHealth = serializedObject.FindProperty("maxHealth");
         maxHealthSO = serializedObject.FindProperty("maxHealthSO");
+        team = serializedObject.FindProperty("team");
     }
 
     public override void OnInspectorGUI()
@@ -35,6 +37,8 @@ public class HealthEditor : Editor
         EditorGUILayout.PropertyField(maxHealthIsSO);
         if (maxHealthIsSO.boolValue) EditorGUILayout.PropertyField(maxHealthSO);
         else EditorGUILayout.PropertyField(maxHealth);
+
+        EditorGUILayout.PropertyField(team);
 
         serializedObject.ApplyModifiedProperties();
     }

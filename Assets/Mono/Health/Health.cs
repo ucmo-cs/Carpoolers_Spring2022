@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     public bool maxHealthIsSO;
     public float maxHealth;
     public FloatSO maxHealthSO;
+    public string team;
 
     public void damageSelf(float damage)
     {

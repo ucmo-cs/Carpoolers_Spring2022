@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 325225388831428115}
   - component: {fileID: 325225388831428112}
+  - component: {fileID: 3229037056976294290}
   m_Layer: 0
   m_Name: Base Attack
   m_TagString: Untagged
@@ -43,12 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd909c1a8b28374aa60675815733e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitboxPrefab: {fileID: 2971402360108391663, guid: 76292744eccabb443a99fccc5726c7b8, type: 3}
+  hitboxPrefab: {fileID: 2887792225000221362, guid: 5e517563d343735438cd78014a0b795b, type: 3}
   allowMultipleHitboxes: 0
   useInputName: 1
   inputName: Base Attack
   positionFromFront: {x: 0, y: 1}
-  scale: {x: 0.5, y: 1}
+  scale: {x: 1, y: 1}
+  colliderScale: {x: 0.5, y: 1}
   velocityFromFront: {x: 0, y: 0}
   dirFromScriptObj: 1
   directionSO: {fileID: 11400000, guid: 882d02cb9ed68904aaba97b4a21b4a6c, type: 2}
@@ -56,6 +58,21 @@ MonoBehaviour:
   hitboxLength: 0.5
   hitboxDelay: 0
   damage: 1
+--- !u!114 &3229037056976294290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325225388831428114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f38e3b563e20db4eab8c3e1b584b9b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  component: {fileID: 325225388831428112}
+  condition: {fileID: 11400000, guid: efec367d27a3548d2a9a681eb5ab85fb, type: 2}
+  flipCondition: 1
 --- !u!1 &325225388944841283
 GameObject:
   m_ObjectHideFlags: 0

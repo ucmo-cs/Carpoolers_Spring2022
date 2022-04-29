@@ -793,6 +793,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SampleEnemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6662333304468436025, guid: 8c185b63c5c204c7db3d9957a1b0e13b, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091230019624593732, guid: 8c185b63c5c204c7db3d9957a1b0e13b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c185b63c5c204c7db3d9957a1b0e13b, type: 3}
 --- !u!1 &482237560
@@ -3622,7 +3630,7 @@ PrefabInstance:
     - target: {fileID: 5569435225472499400, guid: f2429fd9caf3fd3449938375e44dd38f, type: 3}
       propertyPath: isNotDestroyed
       value: 
-      objectReference: {fileID: 11400000, guid: 7ba3bf213d8b041efb97846ad2a8ed5c, type: 2}
+      objectReference: {fileID: 11400000, guid: 44411b4fe5e6fd6418662cfe1abf20b3, type: 2}
     - target: {fileID: 5569435225472499400, guid: f2429fd9caf3fd3449938375e44dd38f, type: 3}
       propertyPath: onCollisionEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: BossKey2

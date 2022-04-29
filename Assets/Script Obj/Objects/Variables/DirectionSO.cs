@@ -39,4 +39,17 @@ public class DirectionSO : ScriptableObject
                 return scale;
         }
     }
+
+    public static Vector3 getRotation(Vector3 rotation, Direction direction) {
+        switch (direction) {
+            case Direction.EAST:
+                return new Vector3(rotation.x, rotation.y, (rotation.z + 270) % 360);
+            case Direction.SOUTH:
+                return new Vector3(rotation.x, rotation.y, (rotation.z + 180) % 360);
+            case Direction.WEST:
+                return new Vector3(rotation.x, rotation.y, (rotation.z + 90) % 360);
+            default:
+                return rotation;
+        }
+    }
 }
