@@ -9,8 +9,12 @@ public class BaseAttack : MonoBehaviour
     public bool useInputName;
     public string inputName = "";
 
+    public bool allowTeamDamage = true;
+    public string team;
+
     public Vector2 positionFromFront;
     public Vector2 scale = new Vector2(1, 1);
+    public Vector2 colliderScale = new Vector2(1, 1);
     public Vector2 velocityFromFront;
 
     public bool dirFromScriptObj;
@@ -51,8 +55,10 @@ public class BaseAttack : MonoBehaviour
         GameObject hitbox = Instantiate<GameObject>(hitboxPrefab, transform);
         hitbox.transform.localPosition = DirectionSO.rotatePosToCorrectDirection(positionFromFront, directionToUse);
         hitbox.transform.localScale = DirectionSO.rotateScaleToCorrectDirection(scale, directionToUse);
+        hitbox.transform.rotation = Quaternion.Euler(DirectionSO.getRotation(hitbox.transform.rotation.eulerAngles, directionToUse));
         hitbox.GetComponent<Rigidbody2D>().velocity = DirectionSO.rotatePosToCorrectDirection(velocityFromFront, directionToUse);
         hitbox.GetComponent<BaseAttackHitbox>().creator = this;
+        hitbox.GetComponent<BoxCollider2D>().size = colliderScale;
         if (hitboxLength != -1) Destroy(hitbox, hitboxLength);
 
         hitboxes.Add(hitbox);
@@ -72,6 +78,7 @@ public class BaseAttack : MonoBehaviour
         Health enemyHealth = collider.gameObject.GetComponent<Health>();
 
         if (!enemyHealth) return;
+        if (!allowTeamDamage && team == enemyHealth.team) return;
 
         enemyHealth.damageSelf(damage);
     }
