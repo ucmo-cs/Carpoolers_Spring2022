@@ -48,6 +48,8 @@ MonoBehaviour:
   allowMultipleHitboxes: 0
   useInputName: 1
   inputName: Base Attack
+  allowTeamDamage: 1
+  team: 
   positionFromFront: {x: 0, y: 1}
   scale: {x: 1, y: 1}
   colliderScale: {x: 0.5, y: 1}
@@ -87,6 +89,7 @@ GameObject:
   - component: {fileID: 325225388944841284}
   - component: {fileID: 4703248664586550117}
   - component: {fileID: 7824606378385273790}
+  - component: {fileID: -6457368012989336050}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -210,6 +213,20 @@ MonoBehaviour:
   maxHealthIsSO: 1
   maxHealth: 0
   maxHealthSO: {fileID: 11400000, guid: 855bfbd7d371e40478a6e23d1ef21bfd, type: 2}
+  team: 
+--- !u!114 &-6457368012989336050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325225388944841283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d27e9ece52078944a82ab8c1c6869768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 11400000, guid: df62c663812ef3b43ab3bfb78c58c602, type: 2}
 --- !u!1 &325225388951353872
 GameObject:
   m_ObjectHideFlags: 0
